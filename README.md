@@ -110,8 +110,8 @@ $ cd {path_to_dir}/Build_WRF/LIBRARIES
 $ wget http://www2.mmm.ucar.edu/wrf/OnLineTutorial/compile_tutorial/tar_files/mpich−3.0.4.tar.gz
 $ wget http://www2.mmm.ucar.edu/wrf/OnLineTutorial/compile_tutorial/tar_files/netcdf−4.1.3.tar.gz
 $ wget http://www2.mmm.ucar.edu/wrf/OnLineTutorial/compile_tutorial/tar_files/jasper−1.900.1.tar.gz
-$ wget http://www2.mmm.ucar.edu/wrf/OnLineTutorial/compile_tutorial/tar_files/libpng −1.2.50.tar.gz
-$ wget http://www2.mmm.ucar.edu/wrf/OnLineTutorial/compile_tutorial/tar_files/zlib −1.2.7.tar.gz
+$ wget http://www2.mmm.ucar.edu/wrf/OnLineTutorial/compile_tutorial/tar_files/libpng−1.2.50.tar.gz
+$ wget http://www2.mmm.ucar.edu/wrf/OnLineTutorial/compile_tutorial/tar_files/zlib−1.2.7.tar.gz
 ```
 
 **It is important to note that these libraries must all be installed with the same compilers as will be used to install WRFV3 and WPS.**
@@ -492,8 +492,6 @@ ungrib.exe
 
 ## Static geography data
 
-* _A video of this part is available [here](https://www.youtube.com/watch?v=yxqpeK-l2ys)._
-
 The WRF modeling system is able to create idealized simulations, though most users are interested in the real-data cases. To initiate a real-data case, the domain's physical location on the globe and the static information for that location must be created. This requires a data set that includes such fields as topography and land use categories. Move to your `Build_WRF` directory, download the file and unpack it. Once unpacked it will be called `geog`, rename to `WPS_GEOG`.
 
 ```console
@@ -573,7 +571,7 @@ Configuration successful. To build the ARWpost, type: compile
 -----------------------------------------------------------------------------------------------
 ```
 
-Edit the `Makefile` file into the `src` directory and modify the `-L$(NETCDF)` line into the `ARWpost.exe` environment to look like:
+Edit the `Makefile` file into the `src` folder and modify the `-L$(NETCDF)` line into the `ARWpost.exe` environment to look like:
 
 ```console
 $ cd {path_to_dir}/ARWpost/src
@@ -584,7 +582,7 @@ $ nano Makefile
 (...)
 ```
 
-Move to the `ARWpost` directory and modify the `CFLAGS` and `CPP` lines into `configure.arwp` file.
+Move to the `ARWpost` folder and modify the `CFLAGS` and `CPP` lines into `configure.arwp` file.
 
 ```console
 $ cd {path_to_dir}/ARWpost
